@@ -1,6 +1,6 @@
 <template>
   <swiper>
-    <swiper-item v-for="(item,index) in banners" :key="index">
+    <swiper-item v-for="(item,index) in banners" :key="index" class="swiperItem">
       <!-- <router-link :to="item.link">
         <img :src="item.image" />
       </router-link> -->
@@ -34,4 +34,5 @@ img {
   width: 100%;
   height: 100%;
 }
+
 </style>

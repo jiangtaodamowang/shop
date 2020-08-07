@@ -11,11 +11,11 @@ export default {
 <style scoped>
 .header {
     width: 100%;
-    height: .98rem;
+    height: .88rem;
     background-color: #ff8198;
     text-align: center;
     font-size: .48rem;
     color: #fff;
-    line-height: .98rem;
+    line-height: .88rem;
 }
 </style>
