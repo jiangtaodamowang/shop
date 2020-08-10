@@ -41,6 +41,7 @@ export default {
         })
     },
     methods: {
+        //封装home用
         finishPullUp() {
             this.scroll.finishPullUp()
         }

@@ -14,6 +14,7 @@ import './assets/css/font_icon/iconfont.css'
 fastClick.attach(document.body);
 
 Vue.use(vueSwiper)
+Vue.prototype.$bus = new Vue()
 
 Vue.config.productionTip = false
 new Vue({
