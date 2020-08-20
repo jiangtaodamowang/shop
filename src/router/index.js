@@ -5,6 +5,8 @@ const Home = ()=>import ('../views/home/home')
 const Category = ()=>import ('../views/category/category')
 const Shopcar = ()=>import ('../views/shopcar/shopcar')
 const Profile = ()=>import ('../views/profile/profile')
+const Detail = ()=>import ('../views/detail/detail')
+const Settlement = ()=>import ('../views/settlement/settlement')
 const Error = ()=>import ('../views/404')
 
 Vue.use(VueRouter)
@@ -33,6 +35,16 @@ Vue.use(VueRouter)
     path: '/profile',
     name: 'Profile',
     component: Profile
+  },
+  {
+    path: '/detail/:iid',
+    name: 'Detail',
+    component: Detail
+  },
+  {
+    path: '/settlement',
+    name: 'Settlement',
+    component: Settlement
   },
   {
     path: '**',

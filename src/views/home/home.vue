@@ -68,7 +68,7 @@ export default {
     //   this.$refs.scroll.scroll.refresh();
     // });
    
-     this.$bus.$on('itemImageLoad',()=>{
+     this.$bus.$on('homeItemImageLoad',()=>{
         const refresh = debounce(this.$refs.scroll.refresh,500)
         console.log("---");
         refresh()
@@ -78,7 +78,7 @@ export default {
   methods: {
     getHomeMultiData() {
       getHomeMultiData().then((res) => {
-        // console.log(res);
+        console.log(res);
         this.banners = res.data.banner.list;
         this.recommends = res.data.recommend.list;
       });
@@ -89,7 +89,7 @@ export default {
         // console.log(res);
         this.goodsList[type].list.push(...res.data.list);
         this.goodsList[type].page += 1;
-        //每一次上拉加载完成后 要刷新一次
+        //每一次上拉加载完成后 要刷新一次 scroll组件封装
         this.$refs.scroll.finishPullUp();
       });
     },
@@ -130,7 +130,7 @@ export default {
       this.$refs.scroll.scroll.refresh();
     },
     swiperImageLoad() {
-       console.log(this.$refs.tabControl.$el.offsetTop);
+      //  console.log(this.$refs.tabControl.$el.offsetTop);
        this.tabControlOffsetTop = this.$refs.tabControl.$el.offsetTop
     }
   },

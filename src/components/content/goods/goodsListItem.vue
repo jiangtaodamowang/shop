@@ -1,6 +1,6 @@
 <template>
   <div class="goods-item" @click="handleItemGo()">
-    <img :src="showImage" @load='imageLoad()' />
+    <img v-lazy="showImage" @load='imageLoad()' />
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}</span>
@@ -27,9 +27,14 @@ export default {
   methods: {
     handleItemGo() {
       this.$router.push("/detail/" + this.goodsItem.iid);
+      //console.log('点击到详情页');
     },
     imageLoad() {
-      this.$bus.$emit('itemImageLoad')
+      if(this.$route.path.indexOf('/home')) {
+        this.$bus.$emit('homeItemImageLoad')
+      }else if(this.$route.path.indexOf('/detail')) {
+        this.$bus.$emit('detailItemImageLoad')
+      }
     }
   },
 };

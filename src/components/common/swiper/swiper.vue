@@ -229,9 +229,9 @@
 
   .indi-item {
     box-sizing: border-box;
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
+    width: .16rem;
+    height: .16rem;
+    border-radius: .8rem;
     background-color: #fff;
     line-height: 8px;
     text-align: center;
